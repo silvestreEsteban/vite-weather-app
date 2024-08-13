@@ -1,5 +1,5 @@
 import './App.css'
-const cityInput = document.getElementById('city-input')
+const cityInput = document.getElementById('city-input').value
 const displayWeatherInfo = document.getElementById('condition')
 const errorMessage = document.getElementById('text-output')
 import.meta.env.WEATHER_API_KEY
