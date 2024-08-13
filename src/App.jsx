@@ -1,5 +1,5 @@
 import './App.css'
-const cityInput = document.getElementById('city-input').value
+const cityInput = document.getElementById('city-input')
 const displayWeatherInfo = document.getElementById('condition')
 const errorMessage = document.getElementById('text-output')
 import.meta.env.WEATHER_API_KEY
@@ -12,8 +12,9 @@ function App() {
 
 
 function handleClick() {
+let currentCity = cityInput.ariaValueMax;
 const getWeather = fetch(
-  `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.WEATHER_API_KEY}&q=${cityInput || "Tokyo" }&aqi=no`
+  `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.WEATHER_API_KEY}&q=${currentCity || "Tokyo" }&aqi=no`
  )
   .then((res) => res.json())
   .then((data) => {
