@@ -12,7 +12,7 @@ function App() {
 
 
 function handleClick() {
-let currentCity = cityInput.ariaValueMax;
+let currentCity = cityInput.value;
 const getWeather = fetch(
   `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.WEATHER_API_KEY}&q=${currentCity || "Tokyo" }&aqi=no`
  )
