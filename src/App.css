@@ -62,8 +62,10 @@ input[type="text"] {
 .text-output {
   width: 60%;
   height: 40%;
-  border: 1px solid black;
+  border-top: 1px solid black;
   margin: 60px auto;
   font-family: monospace;
+  text-align: center;
+  color: black;
 
 }
