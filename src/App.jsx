@@ -1,6 +1,6 @@
 import './App.css'
 
-const API_KEY = '938bed2ae3ab40f284680757241208'
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY
 import { useState } from 'react';
 
 function App() {
@@ -19,9 +19,13 @@ const getWeather = fetch(
  )
   .then((res) => res.json())
   .then((data) => {
+    const img = data.current.condition.icon
     setInfo(
     `${data.location.name}'s temperature is ${data.current.temp_c}℃.
-     It's ${data.current.condition.text}.`);
+     It's ${data.current.condition.text}.
+     ${img}`);
+     
+
   })
   .catch((err) => {
     console.log(err);
