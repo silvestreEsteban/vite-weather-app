@@ -14,7 +14,7 @@ function App() {
   
  function handleClick(e) {
 e.preventDefault()
-const getWeather = fetch(
+const getWeatherr = fetch(
   `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
  )
   .then((res) => res.json())
